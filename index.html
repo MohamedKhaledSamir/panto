@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body class="min-h-screen">
     <main
@@ -137,39 +143,16 @@
     </section>
     <section id="best-selling" class="bg-gray-100">
       <div class="container mx-auto px-16 max-sm:px-5 py-20">
-        <h3 class="text-3xl text-center font-bold mb-11">
+        <h3 style="margin-bottom: 20px" class="text-3xl text-center font-bold">
           Best Selling Product
         </h3>
 
-        <div
-          class="filter flex gap-x-12 max-sm:gap-x-6 bg-gray-200 w-fit mx-auto items-center py-1 px-1 rounded-full"
-        >
-          <div
-            class="chair text-sm cursor-pointer bg-white py-3 px-5 rounded-full"
-          >
-            Chair
-          </div>
-          <div class="chair text-sm cursor-pointer">Beds</div>
-          <div class="chair text-sm cursor-pointer">Sofa</div>
-          <div class="chair text-sm cursor-pointer mr-5">Lamp</div>
-        </div>
-
-        <div
-          class="carousel min-w-full flex items-center justify-center gap-7 max-sm:gap-3"
-        >
-          <div
-            class="left-arrow translate-x-8 p-3 bg-white rounded-full cursor-pointer"
-          >
-            <img
-              class="min-w-4 min-h-4 max-sm:min-w-2 max-sm:min-h-2"
-              src="./images/left-arrow.svg"
-            />
-          </div>
-
-          <div
-            class="products min-w-full mt-9 flex gap-x-10 max-sm:gap-x-7 overflow-scroll"
-          >
-            <div class="product bg-white p-4 rounded-md bg-opacity-30">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div
+              style="padding-inline: 20px !important; max-width: 320px"
+              class="product swiper-slide bg-white p-4 rounded-md bg-opacity-30"
+            >
               <img
                 class="w-full h-60 object-contain"
                 src="./images/sakarias-armchair.png"
@@ -201,8 +184,10 @@
                 </div>
               </div>
             </div>
-
-            <div class="product bg-white w-1/2 p-4 rounded-md bg-opacity-30">
+            <div
+              style="padding-inline: 50px !important; max-width: 320px"
+              class="product swiper-slide bg-white w-1/2 p-4 rounded-md bg-opacity-30"
+            >
               <img
                 class="w-full h-60 object-contain"
                 src="./images/anjay-chair.png"
@@ -235,7 +220,10 @@
               </div>
             </div>
 
-            <div class="product bg-white w-1/2 p-4 rounded-md bg-opacity-30">
+            <div
+              style="padding-inline: 50px !important; max-width: 320px"
+              class="product swiper-slide bg-white w-1/2 p-4 rounded-md bg-opacity-30"
+            >
               <img
                 class="w-full h-60 object-contain"
                 src="./images/balstar-chair.png"
@@ -268,7 +256,10 @@
               </div>
             </div>
 
-            <div class="product bg-white p-4 rounded-md bg-opacity-30">
+            <div
+              style="padding-inline: 50px !important; max-width: 320px"
+              class="product swiper-slide bg-white p-4 rounded-md bg-opacity-30"
+            >
               <img
                 class="w-full h-60 object-contain"
                 src="./images/nyantuy-chair.png"
@@ -301,20 +292,8 @@
               </div>
             </div>
           </div>
-          <div
-            class="right-arrow -translate-x-8 p-3 bg-white rounded-full cursor-pointer"
-          >
-            <img
-              class="min-w-4 min-h-4 max-sm:min-w-2 max-sm:min-h-2 rotate-180"
-              src="./images/left-arrow.svg"
-            />
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <h3
-          class="text-center flex items-center justify-center gap-x-5 text-base cursor-pointer mt-10 text-orange-500"
-        >
-          View All <img class="w-8 h-8" src="./images/right-arrow.svg" />
-        </h3>
       </div>
     </section>
 
@@ -418,20 +397,15 @@
       >
         Our Client Reviews
       </h4>
-      <div class="carousel flex items-start justify-center">
-        <div
-          class="left-arrow mt-44 min-w-fit min-h-fit p-2 translate-x-6 cursor-pointer flex items-center justify-center shadow-md bg-white rounded-full"
-        >
-          <img class="w-5 h-5" src="./images/left-arrow.svg" />
-        </div>
 
-        <div class="cards gap-x-5 min-w-full overflow-scroll flex">
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
           <div
             style="
               min-height: 476px;
               background: url('./images/bang-background.png');
             "
-            class="card max-sm:px-3 px-5 bg-no-repeat bg-cover flex justify-center items-end rounded-2xl"
+            class="card swiper-slide max-sm:px-3 px-5 bg-no-repeat bg-cover flex justify-center items-end rounded-2xl"
           >
             <div
               class="content px-5 mb-4 pb-4 flex flex-col items-center justify-center bg-white rounded-xl"
@@ -466,7 +440,7 @@
               min-height: 476px;
               background: url('./images/ibuk-background.png');
             "
-            class="card px-5 bg-no-repeat bg-cover flex justify-center items-end rounded-2xl"
+            class="card swiper-slide px-5 bg-no-repeat bg-cover flex justify-center items-end rounded-2xl"
           >
             <div
               class="content px-5 mb-4 pb-4 flex flex-col items-center justify-center bg-white rounded-xl"
@@ -501,7 +475,7 @@
               min-height: 476px;
               background: url('./images/mpok-background.png');
             "
-            class="card px-5 bg-no-repeat bg-cover flex justify-center items-end rounded-2xl"
+            class="card swiper-slide px-5 bg-no-repeat bg-cover flex justify-center items-end rounded-2xl"
           >
             <div
               class="content px-5 mb-4 pb-4 flex flex-col items-center justify-center bg-white rounded-xl"
@@ -530,11 +504,9 @@
             </div>
           </div>
         </div>
-        <div
-          class="right-arrow rotate-180 mt-44 min-w-fit min-h-fit p-2 cursor-pointer -translate-x-6 shadow-md bg-white rounded-full flex items-center justify-center"
-        >
-          <img class="w-5 h-5" src="./images/left-arrow.svg" />
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </scetion>
 
@@ -595,4 +567,34 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      initialSlide: 1, // Use this if 20px happens to align with a particular slide
+    });
+
+    var swiper = new Swiper(".mySwiper2", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </html>
